@@ -1,5 +1,5 @@
-# 📝 Jinja2 Syntax Cheat Sheet
-
+# Jinja2 Templating Syntax
+---
 ## 1. **Basic Expressions**
 ```jinja2
 {{ variable }}          # Output a variable
