@@ -110,6 +110,28 @@ def orm_add(name, email):
     return {"status": "added"}
 ```
 
+
+
+### Update User
+```python
+@app.route("/orm_update/<name>/<email>")
+def orm_add(name, email):
+    user = User.query.get(1)
+    user.email = 'chai@newmail.com'
+    db.session.commit()
+    return {"status": "added"}
+```
+
+### Delete User
+```python
+@app.route("/orm_delete/<name>/<email>")
+def orm_add(name, email):
+    user = User.query.get(1)
+    db.session.delete(user)
+    db.session.commit()
+```
+
+
 ---
 
 ## 4. When to Use What?
