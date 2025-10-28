@@ -60,6 +60,6 @@ This project follows RESTful principles to ensure scalability, maintainability, 
 - **Backend Framework:** Flask  
 - **Database:** MySQL / PostgreSQL / SQLite
 - **Authentication:** JWT (JSON Web Token)  
-- **Data Format:** JSON  
+- **Data Format:** JSON-Postman
 
 ---
