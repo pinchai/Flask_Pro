@@ -57,7 +57,7 @@ This project follows RESTful principles to ensure scalability, maintainability, 
 ---
 
 ## Technology Stack
-- **Backend Framework:** Flask / FastAPI*  
+- **Backend Framework:** Flask  
 - **Database:** MySQL / PostgreSQL / SQLite
 - **Authentication:** JWT (JSON Web Token)  
 - **Data Format:** JSON  
