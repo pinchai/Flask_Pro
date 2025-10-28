@@ -63,3 +63,11 @@ This project follows RESTful principles to ensure scalability, maintainability, 
 - **Data Format:** JSON-Postman
 
 ---
+
+## Submit
+- **Project Source code upload to github**
+- **Record Video Demo**
+- **Send in telgram group's topic**    
+
+---
+
