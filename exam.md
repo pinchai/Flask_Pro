@@ -7,8 +7,13 @@ This project follows RESTful principles to ensure scalability, maintainability, 
 ---
 
 ## Features
-
 ### 1. User Management
+- **List:**
+- **Create:**
+- **Update:**
+- **Delete:** 
+
+### 1.1. Auth
 - **Register:** Create a new user account.  
 - **Login:** Authenticate users and issue access tokens.  
 - **Logout:** Revoke user sessions or tokens.  
