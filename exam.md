@@ -1,79 +1,51 @@
-# Mini Mart REST API
+# exam (E-Commerce Website)
 
-## Project Overview
-The **Mini Mart REST API** is a backend system designed to manage users, products, sales, and reporting for a mini mart.  
-This project follows RESTful principles to ensure scalability, maintainability, and ease of integration with front-end applications.
-
----
-
-## Features
-### 1. User Management
-- **List:**
-- **Create:**
-- **Update:**
-- **Delete:** 
-
-### 1.1. Auth
-- **Register:** Create a new user account.  
-- **Login:** Authenticate users and issue access tokens.  
-- **Logout:** Revoke user sessions or tokens.  
-- **Reset Password:** Securely reset user passwords.
+## 1. Overview
+Build a mini e-commerce website where users can browse products, add them to a cart, and place simple orders. No real payment integration is required.
 
 ---
 
-### 2. Category Management
-- **List Categories:** Retrieve all existing categories.  
-- **Create Category:** Add a new product category.  
-- **Update Category:** Modify existing category details.  
-- **Delete Category:** Remove an existing category.
+## 2. Scenario
+You are developing a mini store called **MiniShop** where:
+- Users browse products.
+- Users add products to a cart.
+- Users checkout as guests.
+- Admin manages products.
+
+
+## 3. Functional Requirements
+
+#### Public Pages
+1. **Home Page**
+   - Display product list with name, price, description.
+   - Actions: View Detail, Add to Cart.
+
+2. **Product Detail Page**
+   - Full product info with quantity selector and Add to Cart.
+
+3. **Cart Page**
+   - List items with quantity, subtotal, total.
+   - Allow update and remove.
+   - Checkout button.
+
+4. **Checkout Page and KHQR(Bakong)**
+   - Form fields:
+     - Name
+     - Email
+     - Phone
+     - Address
+     - ....
+   - Save order to DB.
+
+5. **Order Confirmation Page**
+   - Show order ID and total.
 
 ---
 
-### 3. Product Management
-- Each product record **includes an image column**.  
-- **List Products:** Retrieve all available products.  
-- **Create Product:** Add a new product with details and image.  
-- **Update Product:** Edit existing product information or image.  
-- **Delete Product:** Remove a product from the database.
+### Admin Pages
 
----
-
-### 4. Invoice Management
-- Manage invoices containing customer and transaction details.  
-- Supports creating, viewing, and managing sales invoices.
-
----
-
-### 5. Invoice Detail Management
-- **Create Sale:** Add sale details to an invoice.  
-- **Update Sale Details:** Modify existing sale entries.  
-- **Delete Sale Details:** Remove sale records.
-
----
-
-### 6. Reporting
-- **Sales Reports:**  
-  - Daily Sales  
-  - Weekly Sales  
-  - Monthly Sales  
-- **Sales by Criteria (SaleBy):**  
-  Generate reports based on specific criteria such as product, category, or user.
-
----
-
-## Technology Stack
-- **Backend Framework:** Flask  
-- **Database:** MySQL / PostgreSQL / SQLite
-- **Authentication:** JWT (JSON Web Token)  
-- **Data Format:** JSON-Postman
-
----
-
-## Submit
-- **Project Source code upload to github**
-- **Record Video Demo**
-- **Send in telgram group's topic**
-- ** postman_collection **
-
----
-
+## 5. Submit
+- Hosting Project.
+- Github repo.
+- Video demo about project  .
+- Send me via telegram(private).
