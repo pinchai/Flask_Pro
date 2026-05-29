@@ -52,8 +52,3 @@ csrf.init_app(app)
 migrate.init_app(app, db)
 ```
 ---
-
-> [!WARNING]
-> **Production Best Practices:**
-> 1. Do not hardcode the `SECRET_KEY` in the repository. Use environment variables (e.g., `os.environ.get('SECRET_KEY')`).
-> 2. Avoid using root credentials or password-less configurations for database connections in production environments.
