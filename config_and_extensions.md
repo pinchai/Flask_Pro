@@ -9,38 +9,6 @@ This document explains the configuration loading and extension initialization me
 The application separates its core configuration, extension declarations, and the main application initialization into distinct files. This decoupled design ensures a clean separation of concerns and prevents circular dependency issues (especially between database models and the Flask application context).
 
 ### Architecture & Data Flow
-
-```mermaid
-graph TD
-    classDef default fill:#1e1e24,stroke:#3a3a4a,stroke-width:2px,color:#e4e4e7;
-    classDef config fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#eff6ff;
-    classDef ext fill:#14532d,stroke:#22c55e,stroke-width:2px,color:#f0fdf4;
-    classDef app fill:#581c87,stroke:#a855f7,stroke-width:2px,color:#faf5ff;
-
-    subgraph "Configuration Layer"
-        Config["Config Class (config.py)<br/>• SQLALCHEMY_DATABASE_URI<br/>• SECRET_KEY<br/>• SQLALCHEMY_TRACK_MODIFICATIONS"]:::config
-    end
-
-    subgraph "Extensions Layer"
-        db["db = SQLAlchemy() (extensions.py)"]:::ext
-        migrate["migrate = Migrate() (extensions.py)"]:::ext
-        csrf["csrf = CSRFProtect() (extensions.py)"]:::ext
-    end
-
-    subgraph "Application Layer (app.py)"
-        app["app = Flask(__name__)"]:::app
-        load_conf["app.config.from_object(Config)"]:::app
-        init_db["db.init_app(app)"]:::app
-        init_csrf["csrf.init_app(app)"]:::app
-        init_mig["migrate.init_app(app, db)"]:::app
-    end
-
-    Config -->|Loaded via from_object| load_conf
-    db -->|Imported & initialized| init_db
-    csrf -->|Imported & initialized| init_csrf
-    migrate -->|Imported & initialized with app & db| init_mig
-```
-
 ---
 
 ## 2. Configuration Management (`config.py`)
@@ -59,14 +27,6 @@ class Config:
 
     SECRET_KEY = "super-secret-key"
 ```
-
-### Parameter Breakdown
-
-| Configuration Key | Type | Description |
-| :--- | :--- | :--- |
-| `SQLALCHEMY_DATABASE_URI` | `string` | The database connection string. Currently configured to use a MySQL database named `ssssss` running locally on `localhost` with user `root` (password-less) using the `pymysql` driver. An alternative SQLite configuration is commented out. |
-| `SQLALCHEMY_TRACK_MODIFICATIONS` | `boolean` | Set to `False` to disable the Flask-SQLAlchemy event system. Disabling this avoids significant performance overhead by not tracking object modifications. |
-| `SECRET_KEY` | `string` | A secret cryptographic key used for securing session cookies and validating CSRF tokens. *Production warning: Should be kept secure and loaded via environment variables.* |
 
 ### Loading Configuration (`app.py`)
 In the main application entry point (`app.py`), the configuration class is imported and loaded onto the Flask application object:
