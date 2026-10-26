@@ -28,7 +28,7 @@ You are developing a mini store called **MiniShop** where:
    - Allow update and remove.
    - Checkout button.
 
-4. **Checkout Page and KHQR(Bakong)**
+4. **Checkout Page and Send Notification to Telegram**
    - Form fields:
      - Name
      - Email
