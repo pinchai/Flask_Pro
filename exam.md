@@ -1,4 +1,4 @@
-# exam (E-Commerce Website)
+# exam
 
 ## 1. Overview
 Build a mini e-commerce website where users can browse products, add them to a cart, and place simple orders. No real payment integration is required.
